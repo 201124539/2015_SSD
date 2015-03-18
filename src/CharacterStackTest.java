@@ -1,5 +1,7 @@
 import static org.junit.Assert.*;
 
+import java.util.EmptyStackException;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -27,5 +29,11 @@ public class CharacterStackTest {
 	public void testCharConstructor() {
 		CharacterStack cs = new CharacterStack('\uFFFF');
 		assertEquals(1, cs.getSize());
+	}
+	
+	@Test(expected = EmptyStackException.class)
+	public void testPop() {
+		CharacterStack cs = new CharacterStack();
+		cs.pop();
 	}
 }
