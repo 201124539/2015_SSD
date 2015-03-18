@@ -22,5 +22,10 @@ public class CharacterStackTest {
 		CharacterStack cs = new CharacterStack();
 		assertEquals(0, cs.getSize());
 	}
-
+	
+	@Test
+	public void testCharConstructor() {
+		CharacterStack cs = new CharacterStack('\uFFFF');
+		assertEquals(1, cs.getSize());
+	}
 }
