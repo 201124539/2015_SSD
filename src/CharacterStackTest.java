@@ -28,4 +28,10 @@ public class CharacterStackTest {
 		CharacterStack cs = new CharacterStack('\uFFFF');
 		assertEquals(1, cs.getSize());
 	}
+	
+	@Test
+	public void testStringConstructor() {
+		CharacterStack cs = new CharacterStack("Test");
+		assertEquals(4, cs.getSize());
+	}
 }
