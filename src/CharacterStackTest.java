@@ -17,6 +17,7 @@ public class CharacterStackTest {
 
 	@After
 	public void tearDown() throws Exception {
+		// Empty
 	}
 
 	@Test
@@ -35,5 +36,11 @@ public class CharacterStackTest {
 	public void testPop() {
 		CharacterStack cs = new CharacterStack();
 		cs.pop();
+	}
+	
+	@Test
+	public void testStringConstructor() {
+		CharacterStack cs = new CharacterStack("Test");
+		assertEquals(4, cs.getSize());
 	}
 }
